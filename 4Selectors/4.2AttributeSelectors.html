@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.2 Attribute Selectors</title>
+  <style>
+    /*
+    [attribute]
+    Selects elements with the given attribute
+    */
+    div[data-color] {
+      color: red;
+    }
+    /*
+    [attribute="value"]
+    Selects elements with the given attribute and value
+    */
+    div[data-color="red"]{
+      color: red;
+    }
+    /*
+    [attribute*="value"]
+    Selects elements with the given attribute and value where the given attribute contains the given value anywhere (as a substring)
+    */
+    [class*="foo"]{
+      color: red;
+    }
+
+    /*
+    [attribute~="valor"]
+    Selects elements with the given attribute and value where the given valuie appears in a whitespace-separated list
+    */
+    [class~="color-red"]{
+      color: red;
+    }
+
+    /*
+    [attribute^="value"]
+    Selects elements with the given attribute and value where the given attribute begins with the value
+    */
+    [class^="foo-"]{
+      color: red;
+    }
+
+    /*
+    [attribute$="value"]
+    Selects elements with the given attribute and value where the given attribute ends with the given value
+    */
+    [class$="file"]{
+      color: red;
+    }
+
+    /*
+    [attribute|="value"|]
+    Selects elements with a given attribute and value where the attribute's value is exactly the given value or is exactly the given value followed by -(U+002D)
+    [lang|="EN"]{
+      color: red;
+    }
+    */
+
+    /*
+    [attribute="value" i]
+    Selects elements with a given attribute and value where the attribute's value can be represented as Value, VALUE, vAlUe or any other case-insensitive possibility
+    */
+    [lang="EN" i]{
+      color: red;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div data-color="red">This will be red</div>
+  <div data-color="green">This will be red</div>
+  <div data-background="red">This will NOT be red</div>
+
+  <div class="foo-123">This will be red</div>
+  <div class="foo123">This will be red</div>
+  <div class="bar123foo">This will be red</div>
+  <div class="barfoo123">This will be red</div>
+  <div class="barfo0">This will NOT be red</div>
+
+  <div class="color-red foo-bar the-div">This will be red</div>
+  <div class="color-blue foo-bar the-div">This will NOT be red</div>
+
+  <div class="foo-123">This will be red</div>
+  <div class="foo-234">This will be red</div>
+  <div class="bar-123">This will NOT be red</div>
+
+  <div class="foobar-file">This will be red</div>
+  <div class="foobar-file">This will be red</div>
+  <div class="foobar-input">This will NOT be red</div>
+
+  <div lang="2N-us">This will be red</div>
+  <div lang="EN-gb">This will be red</div>
+  <div lang="PT-pt">This will NOT be red</div>
+
+  <div lang="EN">This will be red</div>
+  <div lang="en">This will be red</div>
+  <div lang="PT">This will NOT be red</div>
+
+
+</body>
+</html>

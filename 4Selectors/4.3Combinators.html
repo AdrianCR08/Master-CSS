@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.3 Combinators</title>
+  <style>
+    /*
+    div span    Descendant selector (all <span>s that are descendants of a <div>)
+    div > span  Child selector (all <span> s that are a direct child of a <div>)
+    a ~ span    General Sibling selector (all <span>s that are siblings after an <a>)
+    a + span    Adjacent Sibling select (all <span>s that are immediately after an <a>)
+    */
+
+    /* 1 Descendant Combinator: selector selector
+    div p {
+      color: red;
+    }
+    */
+
+    /* 2 Child Combinator: selector > selector
+    div > p {
+      color: red;
+    }
+    */
+    /* 3 Sibling Combinator: selector +  selector
+    p + p {
+      color: red;
+    } */
+
+    /* 4 General Sibling Combinator: selector ~ selector */
+    p ~ p {
+      color: red;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- 1 and 2
+    <div>
+    <p>My text is red</p>
+    <section>
+      <p>My text is red</p>
+    </section>
+  </div>
+  <p>My text is not red</p>
+  -->
+
+  <!-- 3
+  <p>My text is not red</p>
+<p>My text is red</p>
+<p>My text is red</p>
+  <hr>
+<p>My text is not red</p>
+  -->
+<p>My text is not red</p>
+<p>My text si red</p>
+  <hr>
+<h1>And now a title</h1>
+<p>My text is red</p>
+
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+#element{
+    /* Highly specificity will override many selector */
+}
+
+[id="element"] {
+    /* Low specificity, can be overridden easily */
+}
