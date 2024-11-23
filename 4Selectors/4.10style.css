@@ -1,0 +1,19 @@
+input:not([disabled]):not(.example){
+background-color: #CCC;
+}
+/* The :not() pseudo-class will also support comma-separated selectors in Selectors Level 4 */
+
+input:not([disabled], .example){
+    background-color: #CCC;
+}
+
+div {
+    height: 80px;
+}
+input {
+    margin: 300px;
+}
+
+div:focus-within {
+    background-color: #1565C0;
+}

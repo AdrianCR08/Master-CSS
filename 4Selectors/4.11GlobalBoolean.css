@@ -1,0 +1,101 @@
+.body{
+    margin: 0;
+}
+/* Animate EVERYTHING - well almost. */
+* {
+    transition: all .2s, height 1ms;
+}
+
+[for] {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#container, #footer {
+    width: calc(100% - 2em);
+    color: #555;
+    padding: 1em;
+}
+
+#darkThemeUsed:checked ~ #container,
+#darkThemeUsed:checked ~ #footer {
+    color: #EEE;
+}
+
+#container {
+    height: calc(100vh - 2em);
+    background: #EEE;
+}
+
+#darkThemeUsed:checked ~ #container{
+    background: #333;
+}
+
+#sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 260px;
+    background: #2196F3;
+    margin-right: -304px;
+    padding: 20px;
+    color: #FFF;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+#sidebarShown:checked ~ #container #sidebar {
+    margin-right: 0;
+}
+
+#darkThemeUsed:checked ~ #container #sidebar {
+    background: #303F9F;
+}
+
+h3, h4 {
+    margin: 1.5em 0 .6em 0;
+}
+
+label {
+    cursor: pointer;
+}
+
+label[for=darkThemeUsed]:after {
+    content: "No";
+}
+#darkThemeUsed:checked ~ #container label[for=darkThemeUsed]:after {
+    content: "Yes";
+}
+
+.button {
+    display: inline-block;
+    font-weight: bold;
+    line-height: 36px;
+    text-align: center;
+    padding: 0 8px;
+    min-width: 20px;
+    background: rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+    text-transform: uppercase;
+    font-size: 90%;
+}
+
+#darkThemeUsed:checked ~ * .button {
+    background: rgba(255, 255, 255, .1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .8);
+}
+
+#footer {
+    height: 20px;
+    position: fixed;
+    bottom: 0;
+    background: #DDD;
+}
+
+#darkThemeUsed:checked ~ #footer {
+    background: #444;
+}
