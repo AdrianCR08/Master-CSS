@@ -1,0 +1,36 @@
+div {
+    /* background-color: red; standard red */
+    background-color: #DE1205; /* hexadecimal*/
+}
+
+head {
+    background-color: rgb(0, 0, 0); /* black */
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+}
+
+/*
+    HSL/HSLA
+    - Hue is a degree on the color wheel (from 0 to 360)
+    - Saturation is a percentage between 0% and 100%
+    - Lightness is also a percentage between 0% and 100%
+    - a alpha parameter between 0.0 and 1.0 to define opacity
+*/
+
+li a {
+    background-color: hsl(120, 100%, 50%); /* green */
+}
+
+#p1 {
+    background-color: hsla(120, 100%, 50%, .3); /* green with 30% opacity */
+}
+
+/* Interacting with background-image */
+
+body {
+    background: red url("img/Dash.jpg");
+}
+
+
