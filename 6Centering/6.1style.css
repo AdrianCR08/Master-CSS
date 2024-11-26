@@ -1,0 +1,24 @@
+/* html, body, .container {
+    height: 100%;
+}
+.container {
+    display: flex;
+    justify-content: center; /* horizontal center */
+/* }
+
+img {
+    align-self: center; /* vertical center */
+/* }
+
+
+ */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center; /* vertical center */
+}

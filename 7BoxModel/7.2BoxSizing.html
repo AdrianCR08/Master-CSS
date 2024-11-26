@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7.2 Box-Sizing</title>
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+        /*
+        textarea {
+            width: 100%;
+            padding: 3px;
+            box-sizing: border-box;
+        }
+        */
+        *, *:before, *:after{
+            box-sizing: inherit;
+        }
+
+    </style>
+</head>
+<body>
+<label for="txtCom">Comments: </label><textarea name="text" id="txtCom" cols="30" rows="10"></textarea>
+</body>
+</html>

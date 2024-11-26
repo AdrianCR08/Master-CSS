@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>8.1 Margin Collapsing</title>
+    <style>
+        /* Adjacent vertical margins
+        div {
+            margin: 10px;
+        }
+        */
+
+
+        /* Adjacent horizontal margins
+        span {
+            margin: 10px;
+        }
+        */
+
+
+        /* Overlaping with different sizes
+        .top {
+            margin: 10px;
+        }
+        .bottom {
+            margin: 15px;
+        }
+        */
+        .outer-top {
+            margin: 10px;
+        }
+        .inner-top {
+            margin: 15px;
+        }
+        .outer-bottom {
+            margin: 20px;
+        }
+
+        .inner-bottom {
+            margin: 25px;
+        }
+
+        div {
+            border: 1px solid red;
+        }
+
+
+    </style>
+</head>
+<body>
+<!--
+    <div>
+        some content
+    </div>
+    <div>
+        some more content
+    </div>
+
+    <span>some</span><span>content</span>
+
+    <div class="top">
+    some content
+</div>
+<div class="bottom">
+    some more content
+</div>
+-->
+<div class="outer-top">
+    <div class="inner-top">
+        some content
+    </div>
+</div>
+<div class="outer-bottom">
+    <div class="inner-bottom">
+        some some content
+    </div>
+</div>
+
+</body>
+</html>

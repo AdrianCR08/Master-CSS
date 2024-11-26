@@ -1,0 +1,16 @@
+.parent {
+    background: yellow;
+    margin: 20px;
+    border: 1px solid black;
+    position: relative;
+    height: 500px;
+}
+
+.center {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
